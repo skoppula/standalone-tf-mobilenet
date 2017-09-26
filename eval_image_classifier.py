@@ -91,8 +91,6 @@ def main(_):
     # Select the eval dataset #
     ######################
     assert FLAGS.dataset_name == 'imagenet'
-    if name not in datasets_map:
-      raise ValueError('Name of dataset unknown %s' % name)
     dataset = imagenet.get_split(FLAGS.dataset_split_name, FLAGS.dataset_dir)
 
     ####################
